@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Your project | Ashgrove Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+:root{--u:min(100vw/1357,100dvh/871);--amber:#f4b942;--ease:cubic-bezier(.22,1,.36,1);--g:rgba(255,255,255,.14);--gl:rgba(255,255,255,.28)}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font-family:'Inter Tight',-apple-system,'Segoe UI',Arial,sans-serif;color:#fff;background:#08132f;overflow:hidden;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;background:radial-gradient(900px 620px at 8% 105%,rgba(244,185,66,.26),transparent 62%),radial-gradient(700px 500px at 60% -10%,rgba(80,110,220,.38),transparent 65%),linear-gradient(160deg,#0f2a7a,#08132f 70%)}
+.bg::after{content:"";position:absolute;inset:0;background:none}
+.stage{position:fixed;left:50%;top:50%;width:calc(1357*var(--u));height:calc(871*var(--u));transform:translate(-50%,-50%)}
+.glass{position:absolute;background:var(--g);border:1px solid var(--gl);backdrop-filter:blur(calc(22*var(--u))) saturate(1.4);-webkit-backdrop-filter:blur(calc(22*var(--u))) saturate(1.4);box-shadow:0 calc(10*var(--u)) calc(40*var(--u)) rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.25)}
+.side{left:calc(24*var(--u));top:calc(24*var(--u));width:calc(72*var(--u));height:calc(823*var(--u));border-radius:calc(36*var(--u));display:flex;flex-direction:column;align-items:center;padding:calc(18*var(--u)) 0;gap:calc(10*var(--u));animation:in .8s var(--ease) .05s backwards}
+.side .lg{width:calc(44*var(--u));height:calc(44*var(--u));border-radius:calc(14*var(--u));background:#f4b942;display:grid;place-items:center;margin-bottom:calc(18*var(--u))}
+.side .lg svg{width:60%}
+.ni{width:calc(48*var(--u));height:calc(48*var(--u));border-radius:50%;display:grid;place-items:center;color:rgba(255,255,255,.75);background:none;border:0;cursor:pointer;transition:background .25s,color .25s;text-decoration:none}
+.ni svg{width:52%;height:52%}.ni:hover{background:rgba(255,255,255,.16);color:#fff}.ni.on{background:#fff;color:#0b1f5c}
+.side .sp{flex:1}
+.hd{left:calc(128*var(--u));top:calc(34*var(--u));right:calc(32*var(--u));display:flex;justify-content:space-between;align-items:center;position:absolute;animation:in .8s var(--ease) .15s backwards}
+.hd small{display:block;font-size:calc(15*var(--u));opacity:.8}.hd b{font-size:calc(26*var(--u));font-weight:600;letter-spacing:calc(-.5*var(--u))}
+.tools{display:flex;gap:calc(10*var(--u))}
+.rb{width:calc(46*var(--u));height:calc(46*var(--u));border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;position:static;padding:0;font:inherit}
+.rb svg{width:46%;height:46%}.rb:hover{background:rgba(255,255,255,.26)}
+.chip{position:absolute;left:calc(128*var(--u));top:calc(250*var(--u));padding:calc(9*var(--u)) calc(18*var(--u));border-radius:99px;font-size:calc(15*var(--u));animation:in .8s var(--ease) .3s backwards;display:flex;gap:calc(8*var(--u));align-items:center}
+.chip i{width:calc(8*var(--u));height:calc(8*var(--u));border-radius:50%;background:#7be08f;display:block}
+h1{position:absolute;left:calc(128*var(--u));top:calc(300*var(--u));margin:0;font-weight:600;font-size:calc(68*var(--u));line-height:calc(72*var(--u));letter-spacing:calc(-2.4*var(--u))}
+h1 .ln{display:block;overflow:hidden}h1 .ln span{display:block;animation:lineUp .9s var(--ease) .4s backwards}h1 .ln:nth-child(2) span{animation-delay:.5s}
+.blurb{position:absolute;left:calc(128*var(--u));top:calc(462*var(--u));width:calc(520*var(--u));margin:0;font-size:calc(17*var(--u));line-height:1.45;opacity:.88;animation:in .8s var(--ease) .7s backwards}
+.strip{left:calc(128*var(--u));top:calc(590*var(--u));width:calc(860*var(--u));height:calc(258*var(--u));border-radius:calc(28*var(--u));animation:in .9s var(--ease) .8s backwards}
+.items{position:absolute;left:0;right:0;top:calc(18*var(--u));display:flex;justify-content:space-around;padding:0 calc(10*var(--u))}
+.it{text-align:center;width:calc(130*var(--u));font-size:calc(14*var(--u))}.it b{display:block;font-size:calc(21*var(--u));font-weight:600;margin:calc(4*var(--u)) 0 calc(2*var(--u))}.it span{opacity:.75}.it.done b{color:#9be9aa}.it.now b{color:#f4b942}
+.wave{position:absolute;left:0;bottom:0;width:100%;height:calc(150*var(--u))}
+.wave path.l{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s var(--ease) 1.1s forwards}
+.wave path.a{fill:url(#wg);opacity:0;animation:fade 1s ease 2.2s forwards}.wave circle{fill:#f4b942;stroke:#fff;stroke-width:2;opacity:0;animation:fade .5s ease 3s forwards}
+.rail{position:absolute;right:calc(32*var(--u));top:calc(100*var(--u));width:calc(310*var(--u))}
+.big{position:absolute;right:0;top:0;width:100%;height:calc(300*var(--u));border-radius:calc(28*var(--u));padding:calc(24*var(--u));animation:in .9s var(--ease) .5s backwards}
+.big small{font-size:calc(14*var(--u));opacity:.8}.big .pc{font-size:calc(92*var(--u));font-weight:600;letter-spacing:calc(-4*var(--u));line-height:1;margin:calc(16*var(--u)) 0 calc(8*var(--u))}.big .pc sup{font-size:.4em;letter-spacing:0;vertical-align:top;position:relative;top:.25em}
+.bar{height:calc(8*var(--u));border-radius:99px;background:rgba(255,255,255,.2);overflow:hidden;margin:calc(14*var(--u)) 0}.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#f4b942,#e0a020);transition:width 1.6s var(--ease) 1s}
+.big .kv{display:flex;justify-content:space-between;font-size:calc(14*var(--u))}.big .kv b{display:block;font-size:calc(18*var(--u));font-weight:600}
+.rc{position:absolute;right:0;width:100%;height:calc(124*var(--u));border-radius:calc(24*var(--u));padding:calc(18*var(--u)) calc(22*var(--u));display:flex;align-items:center;gap:calc(16*var(--u))}
+.rc:nth-of-type(2){top:calc(318*var(--u));animation:in .9s var(--ease) .7s backwards}.rc:nth-of-type(3){top:calc(458*var(--u));animation:in .9s var(--ease) .85s backwards}.rc:nth-of-type(4){top:calc(598*var(--u));animation:in .9s var(--ease) 1s backwards}
+.ic{width:calc(52*var(--u));height:calc(52*var(--u));border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;flex:none}.ic svg{width:50%}
+.rc div b{display:block;font-size:calc(18*var(--u));font-weight:600}.rc div span{font-size:calc(14*var(--u));opacity:.8;line-height:1.3;display:block;margin-top:2px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#0b1f5c;padding:10px 18px;border-radius:99px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .3s;z-index:9}.toast.on{opacity:1}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@keyframes in{from{opacity:0;transform:translateY(16px)}}@keyframes lineUp{from{transform:translateY(115%)}}@keyframes draw{to{stroke-dashoffset:0}}@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}.bar i{transition:none}}
+@media (max-width:860px){
+ body{overflow:auto;height:auto}.bg{position:fixed}
+ .stage{position:relative;left:auto;top:auto;transform:none;width:100%;height:auto;padding:16px 16px 96px;display:flex;flex-direction:column;gap:14px}
+ .stage>*,.rail>*{position:relative!important;left:auto!important;right:auto!important;top:auto!important;width:100%!important;height:auto!important}
+ .rail{position:relative;width:100%;display:flex;flex-direction:column;gap:14px;order:5}
+ .side{order:9;position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;height:64px!important;flex-direction:row;padding:0 12px;border-radius:32px;justify-content:space-around;z-index:5}
+ .side .lg,.side .sp{display:none}.ni{width:46px;height:46px}.side .ni svg{width:24px;height:24px}
+ .hd{order:0;position:relative!important}.hd small{font-size:14px}.hd b{font-size:22px}.rb{width:42px;height:42px}.rb svg{width:20px;height:20px}
+ .chip{order:1;align-self:flex-start;width:auto!important;font-size:14px;padding:8px 14px}
+ h1{order:2;font-size:40px;line-height:44px;letter-spacing:-1.4px}.blurb{order:3;font-size:16px}
+ .strip{order:4;padding:16px 0 0;border-radius:24px;overflow:hidden}.items{position:relative;flex-wrap:wrap;gap:12px 0;top:auto}.it{width:33.3%;font-size:13px}.it b{font-size:18px}.wave{position:relative;height:110px;margin-top:8px}
+ .big{padding:22px;border-radius:24px}.big small,.big .kv{font-size:14px}.big .pc{font-size:76px}.big .kv b{font-size:17px}.bar{height:8px}
+ .rc{height:auto;padding:16px 18px;border-radius:22px;gap:14px}.ic{width:46px;height:46px}.rc div b{font-size:17px}.rc div span{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="stage" id="stage" hidden>
+  <nav class="glass side" aria-label="Dashboard">
+    <div class="lg"><svg viewBox="0 0 24 24" fill="none" stroke="#0b1f5c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19 12 4l9 15"/><path d="M8 19v-5h8v5" stroke-width="2.2"/></svg></div>
+    <button class="ni on" aria-label="Dashboard" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="9" rx="2"/><rect x="13.5" y="3" width="7.5" height="5.5" rx="2"/><rect x="13.5" y="12" width="7.5" height="9" rx="2"/><rect x="3" y="15.5" width="7.5" height="5.5" rx="2"/></svg></button>
+    <button class="ni" data-t="Your project list opens here in the full version." aria-label="Projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9H3z"/></svg></button>
+    <button class="ni" data-t="Plans and contracts open here in the full version." aria-label="Documents"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg></button>
+    <button class="ni" data-t="Messages with your supervisor open here in the full version." aria-label="Messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
+    <span class="sp"></span>
+    <button class="ni" id="out" aria-label="Sign out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H5v16h4"/><path d="M16 8l4 4-4 4M20 12H9"/></svg></button>
+  </nav>
+  <header class="hd"><div><small>Welcome</small><b id="who">Client</b></div>
+    <div class="tools"><a class="glass rb" href="index.html#contact" aria-label="Contact us" style="text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg></a><button class="glass rb" data-t="You have 3 new updates on your project." aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21h4"/></svg></button><a class="glass rb" href="index.html" aria-label="Back to website" style="text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 8 12l7 7"/></svg></a></div>
+  </header>
+  <div class="glass chip"><i></i>Site active · Kandy, Sri Lanka</div>
+  <h1><span class="ln"><span>Hill Country House</span></span><span class="ln"><span>is 62% built.</span></span></h1>
+  <p class="blurb">The roof frame is up and the first fix electrical starts Monday. Your handover is planned for 14 March, and nothing so far has moved that date.</p>
+  <section class="glass strip" aria-label="Project stages">
+    <div class="items">
+      <div class="it done"><span>Stage 1</span><b>Design</b><span>Done</span></div>
+      <div class="it done"><span>Stage 2</span><b>Approvals</b><span>Done</span></div>
+      <div class="it done"><span>Stage 3</span><b>Foundation</b><span>Done</span></div>
+      <div class="it now"><span>Stage 4</span><b>Structure</b><span>In progress</span></div>
+      <div class="it"><span>Stage 5</span><b>Finishes</b><span>From Dec</span></div>
+      <div class="it"><span>Stage 6</span><b>Handover</b><span>14 Mar</span></div>
+    </div>
+    <svg class="wave" viewBox="0 0 860 150" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+      <path class="a" d="M0 130C90 125 150 100 215 92S340 70 430 56 560 44 645 40 780 22 860 14V150H0z"/>
+      <path class="l" pathLength="1" d="M0 130C90 125 150 100 215 92S340 70 430 56 560 44 645 40 780 22 860 14"/>
+      <circle cx="540" cy="46" r="7"/></svg>
+  </section>
+  <aside class="rail">
+    <section class="glass big"><small>Overall progress</small><div class="pc"><span id="pc">0</span><sup>%</sup></div><div class="bar" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i id="bar"></i></div><div class="kv"><div><small>Started</small><b>12 May</b></div><div><small>Handover</small><b>14 Mar</b></div><div><small>Days left</small><b>126</b></div></div></section>
+    <section class="glass rc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20V10l8-6 8 6v10z"/></svg></span><div><b>Next milestone</b><span>Roof sheeting complete, 22 Nov</span></div></section>
+    <section class="glass rc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/></svg></span><div><b>2 documents</b><span>Variation 03 needs your signature</span></div></section>
+    <section class="glass rc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7"/></svg></span><div><b>Site supervisor</b><span>Nuwan Perera · +94 11 234 5678</span></div></section>
+  </aside>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  var KEY='ashgrove-session',s=null;
+  try{s=JSON.parse(sessionStorage.getItem(KEY)||localStorage.getItem(KEY)||'null')}catch(e){}
+  if(!s){agGo('login.html');return}
+  var st=document.getElementById('stage');st.hidden=false;
+  document.getElementById('who').textContent=s.name||s.username||'Client';
+  var pc=document.getElementById('pc'),bar=document.getElementById('bar'),t0=null,T=1600,R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function tick(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/T);pc.textContent=Math.round(62*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)}
+  if(R){pc.textContent=62;bar.style.width='62%'}else{setTimeout(function(){requestAnimationFrame(tick)},1000);requestAnimationFrame(function(){bar.style.width='62%'})}
+  var to=document.getElementById('toast'),tm;
+  [].forEach.call(document.querySelectorAll('[data-t]'),function(b){b.addEventListener('click',function(){to.textContent=b.dataset.t;to.classList.add('on');clearTimeout(tm);tm=setTimeout(function(){to.classList.remove('on')},2400)})});
+  document.getElementById('out').addEventListener('click',function(){try{sessionStorage.removeItem(KEY);localStorage.removeItem(KEY)}catch(e){}agGo('login.html')});
+})();
+
+/* page links that still work when the host serves pages from a different base path */
+function agGo(p){var h='',x=p.indexOf('#');if(x>-1){h=p.slice(x);p=p.slice(0,x)}
+ var d=location.pathname,c=[p,d.replace(/\/$/,'')+'/'+p,'/'+p],i=0;
+ function go(u){location.href=u+h}
+ function next(){if(i>=c.length)return go(c[0]);var u=c[i++];fetch(u,{method:'GET',credentials:'same-origin'}).then(function(r){var t=r.headers.get('content-type')||'';if(r.ok&&t.indexOf('html')>-1)go(u);else next()}).catch(function(){i>=c.length?go(c[0]):go(c[0])})}
+ next()}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||a.target==='_blank')return;var h=a.getAttribute('href');if(/^(index|login|signup|dashboard)\.html(#.*)?$/.test(h)){e.preventDefault();agGo(h)}});
+</script>
+</body>
+</html>

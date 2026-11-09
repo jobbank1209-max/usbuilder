@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sign up | Ashgrove Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+<style>
+:root{--u:max(.62px,min(100vw/1672,100dvh/941));--amber:#f4b942;--amber2:#f4b942;--goldtx:#8a6200;--navy:#0b1f5c;--ink:#0b1f5c;--sec:#48598a;--mut:#7a89b3;--ph:#95a1c4;--line:#c9d4f1;--card:#ffffff;--btn:#0b1f5c;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:'Geist','Inter',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#fff;background:#08132f;-webkit-font-smoothing:antialiased;min-height:100dvh}
+.plate{position:fixed;inset:0;background:radial-gradient(calc(900*var(--u)) calc(620*var(--u)) at 8% 105%,rgba(244,185,66,.28),transparent 62%),radial-gradient(calc(700*var(--u)) calc(500*var(--u)) at 40% -10%,rgba(80,110,220,.35),transparent 65%),linear-gradient(160deg,#0f2a7a,#08132f 70%);z-index:0}
+.plate::after{content:"";position:absolute;inset:0;background:none}
+.page{position:relative;z-index:1;display:flex;min-height:100dvh}
+.hero{flex:1;position:relative;min-width:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(57*var(--u)) calc(60*var(--u)) calc(70*var(--u)) calc(92.5*var(--u))}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:calc(20*var(--u))}
+.logo{display:flex;align-items:center;gap:calc(14*var(--u));color:#fff;text-decoration:none;animation:up .7s var(--ease) .1s backwards}
+.tile{display:grid;place-items:center;width:calc(48*var(--u));height:calc(48*var(--u));min-width:28px;min-height:28px;border-radius:calc(12*var(--u));background:#f4b942}
+.tile svg{width:60%;height:60%}
+.logo b{font-weight:600;font-size:calc(35.5*var(--u));letter-spacing:calc(-.95*var(--u));min-font-size:18px}
+.back{color:var(--amber2);text-decoration:none;font-weight:520;font-size:calc(17.4*var(--u));animation:up .7s var(--ease) .2s backwards}
+.back:hover{text-decoration:underline}
+h1.pitch{margin:0;color:#fff;font-weight:600;font-size:calc(62*var(--u));line-height:calc(70*var(--u));letter-spacing:calc(-2.6*var(--u))}
+.pitch .ln{display:block;overflow:hidden}.pitch .ln span{display:block;animation:lineUp .9s var(--ease) backwards}.pitch .ln:nth-child(2) span{animation-delay:.1s}
+.sub{margin:calc(19*var(--u)) 0 0;font-weight:460;font-size:calc(20*var(--u));line-height:calc(27.5*var(--u));max-width:calc(760*var(--u));animation:up .8s var(--ease) .75s backwards}
+.dots{display:flex;gap:calc(9*var(--u));margin-top:calc(35.5*var(--u));animation:up .8s var(--ease) .9s backwards}
+.dots button{border:0;padding:0;height:calc(9*var(--u));min-height:6px;width:calc(9*var(--u));min-width:6px;border-radius:99px;background:rgba(255,255,255,.55);cursor:pointer;transition:width .4s var(--ease),background .3s}
+.dots button.on{width:calc(34.5*var(--u));min-width:24px;background:var(--amber)}
+.panel{width:calc(742.4*var(--u));flex:none;padding:calc(18*var(--u)) calc(18*var(--u)) calc(22.5*var(--u)) 0;display:flex}
+.card{flex:1;background:var(--card);color:var(--ink);border-radius:calc(20*var(--u));display:flex;flex-direction:column;justify-content:center;padding:calc(30*var(--u)) calc(96.2*var(--u));overflow:auto;animation:card 1s var(--ease) .15s backwards}
+.form{width:100%;max-width:calc(559*var(--u));margin:0 auto;display:flex;flex-direction:column}
+.card h2{margin:0;font-weight:660;font-size:calc(50.6*var(--u));letter-spacing:calc(-1.9*var(--u));line-height:1.1;animation:up .7s var(--ease) .5s backwards}
+.card .lead{margin:calc(12*var(--u)) 0 calc(30*var(--u));font-size:calc(19*var(--u));color:var(--sec);line-height:1.4;animation:up .7s var(--ease) .58s backwards}
+.f{display:flex;flex-direction:column;gap:calc(9*var(--u));margin-bottom:calc(18*var(--u));animation:up .7s var(--ease) .66s backwards}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:calc(16*var(--u))}
+label.l{font-weight:560;font-size:calc(17.4*var(--u))}
+.in{position:relative}
+.in input{width:100%;height:calc(66*var(--u));min-height:44px;border:1px solid var(--line);border-radius:calc(10*var(--u));padding:0 calc(20*var(--u));font:inherit;font-size:max(15px,calc(18*var(--u)));color:var(--ink);background:#fff;outline:0;transition:border-color .2s,box-shadow .2s}
+.in input::placeholder{color:var(--ph)}
+.in input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,31,92,.15)}
+.in input.invalid{border-color:#d33}
+.eye{position:absolute;right:calc(14*var(--u));top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:none;cursor:pointer;color:var(--mut);display:grid;place-items:center}
+.eye svg{width:22px;height:22px}.eye .sl{display:none}.eye.on .sl{display:block}
+.err{color:#c62828;font-size:calc(14.5*var(--u));min-height:0;line-height:1.3}.err:empty{display:none}
+.opts{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:calc(4*var(--u)) 0 calc(38*var(--u));animation:up .7s var(--ease) .74s backwards}
+.chk{display:flex;align-items:center;gap:calc(12*var(--u));font-size:calc(17.4*var(--u));cursor:pointer}
+.chk input{appearance:none;-webkit-appearance:none;width:calc(26*var(--u));height:calc(26*var(--u));min-width:18px;min-height:18px;border:1.5px solid #b9bcc2;border-radius:calc(7*var(--u));margin:0;display:grid;place-items:center;cursor:pointer;background:#fff}
+.chk input:checked{background:#0b1f5c;border-color:#0b1f5c}
+.chk input:checked::after{content:"";width:34%;height:58%;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-8%,-8%)}
+.chk input:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+a.amb{color:var(--goldtx);text-decoration:none;font-weight:560}a.amb:hover{text-decoration:underline}
+.go{height:calc(66*var(--u));min-height:46px;border:0;border-radius:99px;background:var(--btn);color:#f4b942;font:inherit;font-weight:600;font-size:calc(19*var(--u));cursor:pointer;transition:background .25s,box-shadow .25s,transform .2s;animation:up .7s var(--ease) .82s backwards}
+.go:hover{background:#08174a;box-shadow:0 8px 24px rgba(0,0,0,.28)}.go:active{transform:translateY(1px)}
+.status{min-height:calc(22*var(--u));margin-top:calc(14*var(--u));font-size:calc(16*var(--u));color:#c62828;text-align:center}.status.ok{color:#1b7a3a}
+.alt{margin:calc(26*var(--u)) 0 0;text-align:center;font-size:calc(17.4*var(--u));color:var(--sec);animation:up .7s var(--ease) .95s backwards}
+.demo{margin:calc(18*var(--u)) 0 0;padding:calc(12*var(--u)) calc(16*var(--u));border:1px dashed #cfd2d7;border-radius:10px;font-size:calc(14.5*var(--u));color:var(--sec);text-align:center}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@keyframes lineUp{from{transform:translateY(115%)}}
+@keyframes card{from{opacity:0;transform:translateY(18px) scale(.99)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:900px){
+ :root{--u:max(.5px,min(100vw/390,.95px))}
+ .page{flex-direction:column}
+ .hero{padding:calc(26*var(--u)) calc(22*var(--u)) calc(30*var(--u));min-height:calc(330*var(--u));justify-content:flex-start;gap:calc(70*var(--u))}
+ .logo b{font-size:calc(26*var(--u))}.tile{width:calc(38*var(--u));height:calc(38*var(--u))}.back{font-size:calc(14.5*var(--u))}
+ h1.pitch{font-size:calc(34*var(--u));line-height:calc(38*var(--u));letter-spacing:calc(-1.2*var(--u))}
+ .sub{font-size:calc(15*var(--u));line-height:calc(21*var(--u))}.dots{margin-top:calc(20*var(--u))}
+ .panel{width:100%;padding:0}
+ .card{border-radius:calc(22*var(--u)) calc(22*var(--u)) 0 0;padding:calc(30*var(--u)) calc(24*var(--u)) calc(40*var(--u));justify-content:flex-start;overflow:visible}
+ .card h2{font-size:calc(34*var(--u))}.card .lead{font-size:calc(15.5*var(--u));margin-bottom:calc(22*var(--u))}
+ label.l,.chk,.alt,a.amb{font-size:calc(14.5*var(--u))}.in input{height:calc(50*var(--u));font-size:16px}.go{height:calc(52*var(--u));font-size:calc(16*var(--u))}
+ .f{margin-bottom:calc(14*var(--u))}.err,.status,.demo{font-size:calc(13*var(--u))}.row2{grid-template-columns:1fr}
+}
+
+.card h2{font-size:calc(44*var(--u))}.card .lead{margin-bottom:calc(20*var(--u))}.f{margin-bottom:calc(12*var(--u))}.in input{height:calc(56*var(--u))}.opts{margin:calc(2*var(--u)) 0 calc(20*var(--u))}.go{height:calc(60*var(--u))}
+@media (max-width:900px){.in input{height:calc(50*var(--u))}.card h2{font-size:calc(34*var(--u))}}</style>
+</head>
+<body>
+<div class="plate" aria-hidden="true"></div>
+<main class="page">
+    <section class="hero">
+      <div class="bar"><a class="logo" href="index.html"><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f5c"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><path d="M3 19 12 4l9 15" fill="none" stroke="url(#lg)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 19v-5h8v5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Ashgrove</b></a><a class="back" href="index.html">← Back to Website</a></div>
+      <div>
+        <h1 class="pitch" id="pitch" aria-live="polite"><span class="ln"><span>Plan with clarity.</span></span><span class="ln"><span>Build with care.</span></span></h1>
+        <p class="sub" id="sub">From a first site visit to the final walkthrough, follow every stage of your home in one place.</p>
+        <div class="dots" role="tablist" aria-label="Messages"><button class="on" type="button" aria-label="Message 1"></button><button type="button" aria-label="Message 2"></button><button type="button" aria-label="Message 3"></button></div>
+      </div>
+    </section>
+    <section class="panel"><div class="card">
+      <form class="form" id="signup" novalidate>
+        <h2>Create your account</h2>
+        <p class="lead">It takes a minute. We send a confirmation email when it is ready.</p>
+        <div class="row2">
+          <div class="f"><label class="l" for="s-name">Full name</label><div class="in"><input id="s-name" placeholder="Your full name" autocomplete="name" required></div><span class="err" id="e-sname" role="alert"></span></div>
+          <div class="f"><label class="l" for="s-user">Username</label><div class="in"><input id="s-user" placeholder="Choose a username" autocomplete="username" autocapitalize="none" spellcheck="false" required></div><span class="err" id="e-suser" role="alert"></span></div>
+        </div>
+        <div class="f"><label class="l" for="s-email">Email</label><div class="in"><input id="s-email" type="email" placeholder="Input your email" autocomplete="email" required></div><span class="err" id="e-semail" role="alert"></span></div>
+        <div class="row2">
+          <div class="f"><label class="l" for="s-pass">Password</label><div class="in"><input id="s-pass" type="password" placeholder="At least 8 characters" autocomplete="new-password" required style="padding-right:56px"><button type="button" class="eye" data-eye="s-pass" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="sl" d="M3 3l18 18"/></svg></button></div><span class="err" id="e-spass" role="alert"></span></div>
+          <div class="f"><label class="l" for="s-pass2">Confirm password</label><div class="in"><input id="s-pass2" type="password" placeholder="Repeat the password" autocomplete="new-password" required style="padding-right:56px"><button type="button" class="eye" data-eye="s-pass2" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="sl" d="M3 3l18 18"/></svg></button></div><span class="err" id="e-spass2" role="alert"></span></div>
+        </div>
+        <div class="opts"><label class="chk" for="s-terms"><input id="s-terms" type="checkbox">I agree to the terms and privacy policy</label></div>
+        <span class="err" id="e-sterms" role="alert" style="margin-top:-14px;margin-bottom:10px"></span>
+        <button class="go" type="submit">Create account</button>
+        <div class="status" id="s-status" role="status" aria-live="polite"></div>
+        <p class="alt">Already have an account? <a class="amb" href="login.html">Log in here</a></p>
+      </form>
+    </div></section>
+</main>
+<script>
+(function(){
+  var SB_URL='',SB_KEY='';/* Supabase project URL and anon public key (see supabase/README.md) */
+  var API_BASE='';/* your backend address, for example https://api.yourdomain.com (see backend/README.md) */
+  var $=function(q){return document.querySelector(q)};
+  
+  var M=[['Plan with clarity.','Build with care.','From a first site visit to the final walkthrough, follow every stage of your home in one place.'],['Every estimate','in writing.','Line items, allowances and a start window, so the price you sign is the price you expect.'],['One supervisor.','One schedule.','A posted schedule and a single point of contact, from the first post to the handover.']],mi=0,tm;
+  var dots=[].slice.call(document.querySelectorAll('.dots button'));
+  function show(i){mi=i;var p=document.getElementById('pitch'),m=M[i];p.innerHTML='<span class="ln"><span>'+m[0]+'</span></span><span class="ln"><span>'+m[1]+'</span></span>';document.getElementById('sub').textContent=m[2];dots.forEach(function(d,j){d.classList.toggle('on',j===i)})}
+  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);clearInterval(tm)})});
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches)tm=setInterval(function(){show((mi+1)%3)},7000);
+  [].forEach.call(document.querySelectorAll('[data-eye]'),function(b){b.addEventListener('click',function(){var i=document.getElementById(b.dataset.eye),on=i.type==='password';i.type=on?'text':'password';b.classList.toggle('on',on);b.setAttribute('aria-label',on?'Hide password':'Show password')})});
+  var pl=document.querySelector('.plate');
+
+  var sf=$('#signup'),ss=$('#s-status'),EM=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  function se(id,msg){var e=$('#e-s'+id),i=$('#s-'+id);e.textContent=msg;if(i.type!=='checkbox')i.classList.toggle('invalid',!!msg);if(msg)i.setAttribute('aria-invalid','true');else i.removeAttribute('aria-invalid')}
+  ['name','user','email','pass','pass2','terms'].forEach(function(id){$('#s-'+id).addEventListener('input',function(){se(id,'')})});
+  sf.addEventListener('submit',function(e){
+    e.preventDefault();ss.className='status';ss.textContent='';
+    var u=$('#s-user').value.trim().toLowerCase(),UR=/^[a-z0-9_]{3,30}$/,n=$('#s-name').value.trim(),m=$('#s-email').value.trim(),p=$('#s-pass').value,p2=$('#s-pass2').value,t=$('#s-terms').checked,bad=null;
+    se('name',n?'':'Add your name.');se('user',UR.test(u)?'':'Use 3 to 30 letters, numbers or underscores.');se('email',EM.test(m)?'':'Enter a valid email address.');
+    se('pass',p.length>=8?'':'Use at least 8 characters.');se('pass2',p===p2?'':'The passwords do not match.');se('terms',t?'':'Please agree to continue.');
+    bad=!n?'#s-name':!UR.test(u)?'#s-user':!EM.test(m)?'#s-email':p.length<8?'#s-pass':p!==p2?'#s-pass2':!t?'#s-terms':null;
+    if(bad){$(bad).focus();return}
+    if(!API_BASE&&!SB_URL){ss.textContent='Sign up is not connected to a database yet, so nothing was saved. Follow the steps in the backend folder, then set API_BASE.';return}
+    ss.textContent='Creating your account.';
+    if(SB_URL){
+      fetch(SB_URL+'/auth/v1/signup',{method:'POST',headers:{'Content-Type':'application/json',apikey:SB_KEY},body:JSON.stringify({email:m,password:p,data:{name:n,username:u}})})
+        .then(function(r){return r.json().then(function(j){return[r,j]})}).then(function(a){var r=a[0],j=a[1];
+          if(r.ok&&!j.error_code&&!j.code){ss.className='status ok';ss.textContent=j.access_token?'Your account is ready. You can log in now.':'Almost done. Check your email and confirm your address, then log in.';sf.reset();return}
+          var msg=String(j.msg||j.message||j.error_description||'');
+          if(/already|registered/i.test(msg))se('email','That email is already registered.');
+          else if(/username|profiles|database/i.test(msg))se('user','That username is taken. Try another.');
+          else ss.textContent=msg||'That did not work. Please try again.'})
+        .catch(function(){ss.textContent='We could not reach Supabase. Please try again.'});
+      return}
+    fetch(API_BASE+'/api/signup',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:n,username:u,email:m,password:p})})
+      .then(function(r){return r.json().catch(function(){return{}}).then(function(j){
+        if(r.ok){ss.className='status ok';ss.textContent=(j.message||'Your account is ready.')+' You can log in now.';sf.reset();return}
+        ss.textContent='';var er=j.errors||{};if(er.name)se('name',er.name);if(er.username)se('user',er.username);if(er.email)se('email',er.email);if(er.password)se('pass',er.password);
+        if(!j.errors)ss.textContent=j.message||'That did not work. Please try again.'
+      })})
+      .catch(function(){ss.textContent='We could not reach the server. Please try again.'});
+  });
+})();
+
+/* page links that still work when the host serves pages from a different base path */
+function agGo(p){var h='',x=p.indexOf('#');if(x>-1){h=p.slice(x);p=p.slice(0,x)}
+ var d=location.pathname,c=[p,d.replace(/\/$/,'')+'/'+p,'/'+p],i=0;
+ function go(u){location.href=u+h}
+ function next(){if(i>=c.length)return go(c[0]);var u=c[i++];fetch(u,{method:'GET',credentials:'same-origin'}).then(function(r){var t=r.headers.get('content-type')||'';if(r.ok&&t.indexOf('html')>-1)go(u);else next()}).catch(function(){i>=c.length?go(c[0]):go(c[0])})}
+ next()}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||a.target==='_blank')return;var h=a.getAttribute('href');if(/^(index|login|signup|dashboard)\.html(#.*)?$/.test(h)){e.preventDefault();agGo(h)}});
+</script>
+</body>
+</html>

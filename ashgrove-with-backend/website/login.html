@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Log in | Ashgrove Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+<style>
+:root{--u:max(.62px,min(100vw/1672,100dvh/941));--amber:#f4b942;--amber2:#f4b942;--goldtx:#8a6200;--navy:#0b1f5c;--ink:#0b1f5c;--sec:#48598a;--mut:#7a89b3;--ph:#95a1c4;--line:#c9d4f1;--card:#ffffff;--btn:#0b1f5c;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:'Geist','Inter',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#fff;background:#08132f;-webkit-font-smoothing:antialiased;min-height:100dvh}
+.plate{position:fixed;inset:0;background:radial-gradient(calc(900*var(--u)) calc(620*var(--u)) at 8% 105%,rgba(244,185,66,.28),transparent 62%),radial-gradient(calc(700*var(--u)) calc(500*var(--u)) at 40% -10%,rgba(80,110,220,.35),transparent 65%),linear-gradient(160deg,#0f2a7a,#08132f 70%);z-index:0}
+.plate::after{content:"";position:absolute;inset:0;background:none}
+.page{position:relative;z-index:1;display:flex;min-height:100dvh}
+.hero{flex:1;position:relative;min-width:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(57*var(--u)) calc(60*var(--u)) calc(70*var(--u)) calc(92.5*var(--u))}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:calc(20*var(--u))}
+.logo{display:flex;align-items:center;gap:calc(14*var(--u));color:#fff;text-decoration:none;animation:up .7s var(--ease) .1s backwards}
+.tile{display:grid;place-items:center;width:calc(48*var(--u));height:calc(48*var(--u));min-width:28px;min-height:28px;border-radius:calc(12*var(--u));background:#f4b942}
+.tile svg{width:60%;height:60%}
+.logo b{font-weight:600;font-size:calc(35.5*var(--u));letter-spacing:calc(-.95*var(--u));min-font-size:18px}
+.back{color:var(--amber2);text-decoration:none;font-weight:520;font-size:calc(17.4*var(--u));animation:up .7s var(--ease) .2s backwards}
+.back:hover{text-decoration:underline}
+h1.pitch{margin:0;color:#fff;font-weight:600;font-size:calc(62*var(--u));line-height:calc(70*var(--u));letter-spacing:calc(-2.6*var(--u))}
+.pitch .ln{display:block;overflow:hidden}.pitch .ln span{display:block;animation:lineUp .9s var(--ease) backwards}.pitch .ln:nth-child(2) span{animation-delay:.1s}
+.sub{margin:calc(19*var(--u)) 0 0;font-weight:460;font-size:calc(20*var(--u));line-height:calc(27.5*var(--u));max-width:calc(760*var(--u));animation:up .8s var(--ease) .75s backwards}
+.dots{display:flex;gap:calc(9*var(--u));margin-top:calc(35.5*var(--u));animation:up .8s var(--ease) .9s backwards}
+.dots button{border:0;padding:0;height:calc(9*var(--u));min-height:6px;width:calc(9*var(--u));min-width:6px;border-radius:99px;background:rgba(255,255,255,.55);cursor:pointer;transition:width .4s var(--ease),background .3s}
+.dots button.on{width:calc(34.5*var(--u));min-width:24px;background:var(--amber)}
+.panel{width:calc(742.4*var(--u));flex:none;padding:calc(18*var(--u)) calc(18*var(--u)) calc(22.5*var(--u)) 0;display:flex}
+.card{flex:1;background:var(--card);color:var(--ink);border-radius:calc(20*var(--u));display:flex;flex-direction:column;justify-content:center;padding:calc(30*var(--u)) calc(96.2*var(--u));overflow:auto;animation:card 1s var(--ease) .15s backwards}
+.form{width:100%;max-width:calc(559*var(--u));margin:0 auto;display:flex;flex-direction:column}
+.card h2{margin:0;font-weight:660;font-size:calc(50.6*var(--u));letter-spacing:calc(-1.9*var(--u));line-height:1.1;animation:up .7s var(--ease) .5s backwards}
+.card .lead{margin:calc(12*var(--u)) 0 calc(30*var(--u));font-size:calc(19*var(--u));color:var(--sec);line-height:1.4;animation:up .7s var(--ease) .58s backwards}
+.f{display:flex;flex-direction:column;gap:calc(9*var(--u));margin-bottom:calc(18*var(--u));animation:up .7s var(--ease) .66s backwards}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:calc(16*var(--u))}
+label.l{font-weight:560;font-size:calc(17.4*var(--u))}
+.in{position:relative}
+.in input{width:100%;height:calc(66*var(--u));min-height:44px;border:1px solid var(--line);border-radius:calc(10*var(--u));padding:0 calc(20*var(--u));font:inherit;font-size:max(15px,calc(18*var(--u)));color:var(--ink);background:#fff;outline:0;transition:border-color .2s,box-shadow .2s}
+.in input::placeholder{color:var(--ph)}
+.in input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,31,92,.15)}
+.in input.invalid{border-color:#d33}
+.eye{position:absolute;right:calc(14*var(--u));top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:none;cursor:pointer;color:var(--mut);display:grid;place-items:center}
+.eye svg{width:22px;height:22px}.eye .sl{display:none}.eye.on .sl{display:block}
+.err{color:#c62828;font-size:calc(14.5*var(--u));min-height:0;line-height:1.3}.err:empty{display:none}
+.opts{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:calc(4*var(--u)) 0 calc(38*var(--u));animation:up .7s var(--ease) .74s backwards}
+.chk{display:flex;align-items:center;gap:calc(12*var(--u));font-size:calc(17.4*var(--u));cursor:pointer}
+.chk input{appearance:none;-webkit-appearance:none;width:calc(26*var(--u));height:calc(26*var(--u));min-width:18px;min-height:18px;border:1.5px solid #b9bcc2;border-radius:calc(7*var(--u));margin:0;display:grid;place-items:center;cursor:pointer;background:#fff}
+.chk input:checked{background:#0b1f5c;border-color:#0b1f5c}
+.chk input:checked::after{content:"";width:34%;height:58%;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-8%,-8%)}
+.chk input:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+a.amb{color:var(--goldtx);text-decoration:none;font-weight:560}a.amb:hover{text-decoration:underline}
+.go{height:calc(66*var(--u));min-height:46px;border:0;border-radius:99px;background:var(--btn);color:#f4b942;font:inherit;font-weight:600;font-size:calc(19*var(--u));cursor:pointer;transition:background .25s,box-shadow .25s,transform .2s;animation:up .7s var(--ease) .82s backwards}
+.go:hover{background:#08174a;box-shadow:0 8px 24px rgba(0,0,0,.28)}.go:active{transform:translateY(1px)}
+.status{min-height:calc(22*var(--u));margin-top:calc(14*var(--u));font-size:calc(16*var(--u));color:#c62828;text-align:center}.status.ok{color:#1b7a3a}
+.alt{margin:calc(26*var(--u)) 0 0;text-align:center;font-size:calc(17.4*var(--u));color:var(--sec);animation:up .7s var(--ease) .95s backwards}
+.demo{margin:calc(18*var(--u)) 0 0;padding:calc(12*var(--u)) calc(16*var(--u));border:1px dashed #cfd2d7;border-radius:10px;font-size:calc(14.5*var(--u));color:var(--sec);text-align:center}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@keyframes lineUp{from{transform:translateY(115%)}}
+@keyframes card{from{opacity:0;transform:translateY(18px) scale(.99)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:900px){
+ :root{--u:max(.5px,min(100vw/390,.95px))}
+ .page{flex-direction:column}
+ .hero{padding:calc(26*var(--u)) calc(22*var(--u)) calc(30*var(--u));min-height:calc(330*var(--u));justify-content:flex-start;gap:calc(70*var(--u))}
+ .logo b{font-size:calc(26*var(--u))}.tile{width:calc(38*var(--u));height:calc(38*var(--u))}.back{font-size:calc(14.5*var(--u))}
+ h1.pitch{font-size:calc(34*var(--u));line-height:calc(38*var(--u));letter-spacing:calc(-1.2*var(--u))}
+ .sub{font-size:calc(15*var(--u));line-height:calc(21*var(--u))}.dots{margin-top:calc(20*var(--u))}
+ .panel{width:100%;padding:0}
+ .card{border-radius:calc(22*var(--u)) calc(22*var(--u)) 0 0;padding:calc(30*var(--u)) calc(24*var(--u)) calc(40*var(--u));justify-content:flex-start;overflow:visible}
+ .card h2{font-size:calc(34*var(--u))}.card .lead{font-size:calc(15.5*var(--u));margin-bottom:calc(22*var(--u))}
+ label.l,.chk,.alt,a.amb{font-size:calc(14.5*var(--u))}.in input{height:calc(50*var(--u));font-size:16px}.go{height:calc(52*var(--u));font-size:calc(16*var(--u))}
+ .f{margin-bottom:calc(14*var(--u))}.err,.status,.demo{font-size:calc(13*var(--u))}.row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="plate" aria-hidden="true"></div>
+<main class="page">
+    <section class="hero">
+      <div class="bar"><a class="logo" href="index.html"><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f5c"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><path d="M3 19 12 4l9 15" fill="none" stroke="url(#lg)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 19v-5h8v5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Ashgrove</b></a><a class="back" href="index.html">← Back to Website</a></div>
+      <div>
+        <h1 class="pitch" id="pitch" aria-live="polite"><span class="ln"><span>Plan with clarity.</span></span><span class="ln"><span>Build with care.</span></span></h1>
+        <p class="sub" id="sub">From a first site visit to the final walkthrough, follow every stage of your home in one place.</p>
+        <div class="dots" role="tablist" aria-label="Messages"><button class="on" type="button" aria-label="Message 1"></button><button type="button" aria-label="Message 2"></button><button type="button" aria-label="Message 3"></button></div>
+      </div>
+    </section>
+    <section class="panel"><div class="card">
+      <form class="form" id="login" novalidate>
+        <h2>Welcome back!</h2>
+        <p class="lead">Log in to follow your project from site visit to handover.</p>
+        <div class="f"><label class="l" for="l-user">Username or email</label><div class="in"><input id="l-user" placeholder="Input your username or email" autocomplete="username" autocapitalize="none" spellcheck="false" required></div><span class="err" id="e-luser" role="alert"></span></div>
+        <div class="f"><label class="l" for="l-pass">Password</label><div class="in"><input id="l-pass" type="password" placeholder="Input your password" autocomplete="current-password" required style="padding-right:60px"><button type="button" class="eye" data-eye="l-pass" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="sl" d="M3 3l18 18"/></svg></button></div><span class="err" id="e-lpass" role="alert"></span></div>
+        <div class="opts"><label class="chk" for="l-rem"><input id="l-rem" type="checkbox">Remember me</label><a class="amb" href="index.html#contact">Forgot password?</a></div>
+        <button class="go" type="submit">Login</button>
+        <div class="status" id="l-status" role="status" aria-live="polite"></div>
+        <p class="demo" id="lgDemo">Demo mode. Username demo, password demo1234.</p>
+        <p class="alt">Don’t have an account? <a class="amb" href="signup.html">Sign up here</a></p>
+      </form>
+    </div></section>
+</main>
+<script>
+(function(){
+  var SB_URL='',SB_KEY='';/* Supabase project URL and anon public key (see supabase/README.md) */
+  var API_BASE='';/* your backend address, for example https://api.yourdomain.com (see backend/README.md) */
+  var $=function(q){return document.querySelector(q)};
+  
+  var M=[['Plan with clarity.','Build with care.','From a first site visit to the final walkthrough, follow every stage of your home in one place.'],['Every estimate','in writing.','Line items, allowances and a start window, so the price you sign is the price you expect.'],['One supervisor.','One schedule.','A posted schedule and a single point of contact, from the first post to the handover.']],mi=0,tm;
+  var dots=[].slice.call(document.querySelectorAll('.dots button'));
+  function show(i){mi=i;var p=document.getElementById('pitch'),m=M[i];p.innerHTML='<span class="ln"><span>'+m[0]+'</span></span><span class="ln"><span>'+m[1]+'</span></span>';document.getElementById('sub').textContent=m[2];dots.forEach(function(d,j){d.classList.toggle('on',j===i)})}
+  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);clearInterval(tm)})});
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches)tm=setInterval(function(){show((mi+1)%3)},7000);
+  [].forEach.call(document.querySelectorAll('[data-eye]'),function(b){b.addEventListener('click',function(){var i=document.getElementById(b.dataset.eye),on=i.type==='password';i.type=on?'text':'password';b.classList.toggle('on',on);b.setAttribute('aria-label',on?'Hide password':'Show password')})});
+  var pl=document.querySelector('.plate');
+
+  var demo=!API_BASE&&!SB_URL,st=$('#l-status'),KEY='ashgrove-session';
+  $('#lgDemo').hidden=!demo;
+  function save(o,keep){try{(keep?localStorage:sessionStorage).setItem(KEY,JSON.stringify(o));if(keep)sessionStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  function load(){try{return JSON.parse(sessionStorage.getItem(KEY)||localStorage.getItem(KEY)||'null')}catch(e){return null}}
+  function go(){agGo('dashboard.html')}
+  function fe(id,m){var e=$('#e-'+id),i=$('#l-'+id.slice(1));e.textContent=m;i.classList.toggle('invalid',!!m);if(m)i.setAttribute('aria-invalid','true');else i.removeAttribute('aria-invalid')}
+  ['luser','lpass'].forEach(function(id){$('#l-'+id.slice(1)).addEventListener('input',function(){fe(id,'')})});
+  var s0=load();if(s0){if(demo||!s0.token)go();else fetch(API_BASE+'/api/me',{headers:{Authorization:'Bearer '+s0.token}}).then(function(r){if(r.ok)go()}).catch(function(){})}
+  $('#login').addEventListener('submit',function(e){
+    e.preventDefault();st.className='status';st.textContent='';
+    var u=$('#l-user').value.trim(),p=$('#l-pass').value,keep=$('#l-rem').checked;
+    fe('luser',u?'':'Enter your username or email.');fe('lpass',p?'':'Enter your password.');
+    if(!u||!p){$(!u?'#l-user':'#l-pass').focus();return}
+    if(demo){if(u.toLowerCase()==='demo'&&p==='demo1234'){save({name:'Demo Client',username:'demo'},keep);go()}else st.textContent='Username or password is not right.';return}
+    st.textContent='Signing in.';
+    if(SB_URL){
+      var H={'Content-Type':'application/json',apikey:SB_KEY};
+      var em=u.indexOf('@')>-1?Promise.resolve(u):fetch(SB_URL+'/rest/v1/rpc/email_for_username',{method:'POST',headers:H,body:JSON.stringify({u:u.toLowerCase()})}).then(function(r){return r.json()}).then(function(x){return typeof x==='string'?x:''});
+      em.then(function(mail){if(!mail)throw 'bad';return fetch(SB_URL+'/auth/v1/token?grant_type=password',{method:'POST',headers:H,body:JSON.stringify({email:mail,password:p})})})
+        .then(function(r){return r.json()}).then(function(j){
+          if(!j.access_token)throw 'bad';
+          var md=j.user.user_metadata||{};save({token:j.access_token,name:md.name||u,username:md.username||u},keep);go()})
+        .catch(function(x){st.textContent=x==='bad'?'Username or password is not right.':'We could not reach the server. Please try again.'});
+      return}
+    fetch(API_BASE+'/api/login',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({username:u,password:p})})
+      .then(function(r){return r.json().catch(function(){return{}})}).then(function(j){
+        if(j.ok){save({token:j.token,name:j.name,username:j.username},keep);go()}
+        else st.textContent=j.message||'Could not sign in. Please try again.'})
+      .catch(function(){st.textContent='We could not reach the server. Please try again.'});
+  });
+})();
+
+/* page links that still work when the host serves pages from a different base path */
+function agGo(p){var h='',x=p.indexOf('#');if(x>-1){h=p.slice(x);p=p.slice(0,x)}
+ var d=location.pathname,c=[p,d.replace(/\/$/,'')+'/'+p,'/'+p],i=0;
+ function go(u){location.href=u+h}
+ function next(){if(i>=c.length)return go(c[0]);var u=c[i++];fetch(u,{method:'GET',credentials:'same-origin'}).then(function(r){var t=r.headers.get('content-type')||'';if(r.ok&&t.indexOf('html')>-1)go(u);else next()}).catch(function(){i>=c.length?go(c[0]):go(c[0])})}
+ next()}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||a.target==='_blank')return;var h=a.getAttribute('href');if(/^(index|login|signup|dashboard)\.html(#.*)?$/.test(h)){e.preventDefault();agGo(h)}});
+</script>
+</body>
+</html>
